@@ -1,0 +1,386 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1220;
+    color: #e6edf6;
+}
+
+/*HEADER*/
+header {
+    background: rgba(8, 18, 40, 0.9);
+    /*hiệu ứng mờ mờ của tiêu đề khi vuốt xuống*/
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /*căn đối xứng thành phần*/
+    padding: 15px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*giữ tiêu đề lại*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.tieu_de_phu {
+    font-size: 14px;
+    font-style: italic;
+    color: #facc15;
+    margin-top: 5px;
+}
+
+/*THANH ĐIỀU HƯỚNG*/
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #dbe7f5;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f97316;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #f97316;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/*TIÊU ĐỀ CHÍNH*/
+.tieu_de_chinh {
+    height: 500px;
+    background: linear-gradient(rgba(5, 10, 25, 0.75), rgba(0,0,0,0.7)),
+                url("images/canhdautrang.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*BODY*/
+.khung_su_menh {
+    background: #111c2e;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.khung_su_menh ul {
+    list-style: square;
+    line-height: 2;
+    color: #c3d2e6;
+}
+
+.khung_vi_sao {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.khung_vi_sao_card {
+    background: #16263d;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.khung_vi_sao_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.khung_vi_sao_card h3 {
+    color: #f97316;
+    margin-bottom: 15px;
+}
+
+/*NỘI DUNG CĂN GIỮA*/
+.center {
+    text-align: center;
+}
+
+.center-p {
+    text-align: center;
+    font-size: 18px;
+    color: #b9c9de;
+    padding: 10px 100px;
+}
+
+/*TIÊU ĐỀ PHỤ*/
+h2 {
+    margin-top: 70px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #f97316;
+}
+
+h3 {
+    margin-top: 60px;
+    font-size: 22px;
+    color: #facc15;
+}
+
+/*CONTAINER*/
+.container {
+    padding: 60px;
+}
+
+/*LƯỚI*/
+.luoi {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/*THẺ*/
+.the {
+    background: #152338;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.the:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.7);
+}
+
+.the img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.thanh_phan_the {
+    padding: 15px;
+}
+
+.the p {
+    color: #c3d2e6;
+    margin-bottom: 20px;
+}
+
+/*NÚT*/
+.nut_hien_thi {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nut_hien_thi:hover {
+    background: #c2410c;
+    transform: scale(1.05);
+}
+
+/*FOOTER*/
+.footer {
+    background: #0e1728;
+    color: #b6c6da;
+    text-align: center;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer_thanh_phan h3 {
+    color: #f97316;
+    margin-bottom: 15px;
+}
+
+.footer_thanh_phan p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.footer_ket {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    color: #7fa2c7;
+}
+
+/*TRANG LIÊN HỆ*/
+.khung_chua_lien_he {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.thong_tin_lien_he,
+.mau_dien {
+    flex: 1;
+    background: #152338;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.thong_tin_lien_he p {
+    margin-bottom: 15px;
+}
+
+.mau_dien form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mau_dien input,
+.mau_dien textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #0f1b2e;
+    color: #e6edf6;
+}
+
+.mau_dien button {
+    align-self: flex-start;
+}
+
+/*TOUR*/
+.chia_cot {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.chia_cot_co_dinh {
+    height: 420px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.chia_cot_co_dinh img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cot_nd {
+    background: rgba(12, 25, 50, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cot_nd ul {
+    list-style: none;
+    line-height: 2;
+    color: #facc15;
+}
+
+.cot_nd li {
+    padding: 6px 0;
+}
+
+/*GIỚI THIỆU*/
+.khung_gioi_thieu {
+    margin-top: 60px;
+    background: rgba(20, 30, 55, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/*TIMELINE*/
+.timeline {
+    margin-top: 50px;
+    border-left: 3px solid #f97316;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: #facc15;
+    border-radius: 50%;
+}
+
+
+
+.timeline-item ol {
+    list-style: none;
+    line-height: 2;
+    color: #f97316;
+}
+
+.timeline-item li {
+    padding: 6px 0;
+    color: #e6edf6;
+}
+
+/*BỐ CỤC HÌNH*/
+.dia_diem {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.dia_diem img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.dia_diem img:hover {
+    transform: scale(1.05);
+}
